@@ -1,0 +1,15 @@
+Contest 1:
+    Todo: G
+    Done: E I K L M
+
+Contest 2:
+    Todo: A C H I J
+    Done: K L
+
+Contest 3:
+    Todo: D F
+    Done: B E G H I
+
+Contest 4:
+    Todo: A F H J L
+    Done: C
