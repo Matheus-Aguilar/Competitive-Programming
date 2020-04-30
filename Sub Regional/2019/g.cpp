@@ -12,6 +12,7 @@ long double pu[MAXN], pv[MAXN], cost[MAXN][MAXN], minv[MAXN];
 int pairV[MAXN], way[MAXN];
 bool used[MAXN];
 
+//Algoritmo hungaro do macacario do ITA
 void hungarian(){
     memset(pairV, 0, sizeof(pairV));
     for(int i = 1, j0 = 0; i <= n; i++){
