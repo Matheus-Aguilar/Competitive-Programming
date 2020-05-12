@@ -18,7 +18,7 @@ using namespace std;
 string s, p;
 vector<int> lps;
 
-void buildKMPAutomathon(){
+void buildKMPAutomaton(){
     lps.assign(p.size() + 1, -1);
     int i = 0, j = -1;
     while(i < p.size()){
@@ -86,7 +86,7 @@ struct HLD{
         adj[v].push_back(u);
     }
     void init(int root){
-        buildKMPAutomathon();
+        buildKMPAutomaton();
         dfs(root);
         decompose();
         buildTree(1, 0, adj.size() - 1);
