@@ -62,7 +62,6 @@ int main(){
     if(l == 0) best = 0;
 
     for(long long int i = 0; i < specials && h; i++){
-        //cerr << i << " " << b[i] << " " << b2[i] << " " << a[i] << endl;
         long long int now = b[i];
         if(l <= 1){
             best = max(best, now + a[i]);
@@ -72,7 +71,6 @@ int main(){
             now += b2[k];
             if(j + 1 >= l){
                 best = max(best, now + a[k]);
-                //cerr << best << " " << i << " " << k << endl;
             }
         }
     }
