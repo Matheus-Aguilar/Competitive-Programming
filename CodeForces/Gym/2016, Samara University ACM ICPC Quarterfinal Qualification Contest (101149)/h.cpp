@@ -12,13 +12,13 @@
 
 using namespace std;
 
-//Faltar terminar
-
 int main(){
     optimize;
 
-    int now = 0, acu = 0;
+    int acu = 0;
     string s;
+    deque<int> d;
+    
     cin >> s;
 
     for(int i = 0; i < s.size(); i++){
@@ -26,28 +26,33 @@ int main(){
             acu++;
         else if(s[i] == ')')
             acu--;
+        else
+            d.push_back(i);
     }
 
-    for(int i = 0; i < s.size(); i++){
-        if(s[i] == '(')
-            now++;
-        else if(s[i] == ')')
-            now--;
+    while(!d.empty()){
+        if(acu <= 0){
+            s[d.front()] = '(';
+            d.pop_front();
+            acu++;
+        }
         else{
-            if(now == 0 || acu <= 0){
-                now++;
-                acu++;
-                s[i] = '(';
-            }
-            else{
-                now--;
-                acu--;
-                s[i] = ')';
-            }
+            s[d.back()] = ')';
+            d.pop_back();
+            acu--;
         }
     }
 
-    if(acu > 0)
+    acu = 0;
+
+    for(int i = 0; i < s.size() && acu >= 0; i++){
+        if(s[i] == '(')
+            acu++;
+        else
+            acu--;
+    }
+
+    if(acu != 0)
         cout << "Impossible" << "\n";
     else
         cout << s << "\n";

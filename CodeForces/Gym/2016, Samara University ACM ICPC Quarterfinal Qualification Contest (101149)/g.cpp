@@ -22,8 +22,6 @@ struct Event{
     }
 };
 
-//Falta terminar
-
 int main(){
     optimize;
     
@@ -31,9 +29,8 @@ int main(){
     cin >> n;
 
     vector<pii> z(n);
-    vector<pii> a(m);
     vector<int> ans(n, -1);
-    vector<Event> e(n + m);
+    vector<Event> e;
 
     for(int i = 0; i < n; i++){
         cin >> z[i].first >> z[i].second;
@@ -42,7 +39,9 @@ int main(){
 
     cin >> m;
 
-    for(int i = 0; i < n; i++){
+    vector<pii> a(m);
+    
+    for(int i = 0; i < m; i++){
         cin >> a[i].first >> a[i].second;
         e.push_back(Event(a[i].first, a[i].second, 1, i));
     }
@@ -73,7 +72,7 @@ int main(){
     }
 
     for(int i = 0; i < n; i++)
-        cout << ans[i] << " \n"[i==n-1];
+        cout << ans[i] + 1 << " \n"[i==n-1];
 
     return 0;   
 }
