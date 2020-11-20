@@ -13,6 +13,19 @@ using namespace std;
 
 int main(){
     optimize;
+
+    int a, b, c, n, m;
     
+    cin >> a >> b >> c >> n >> m;
+    
+    if(a + c > n && b + c > m)
+        cout << min(n, m) << "\n";
+    else if(a + c > n)
+        cout << n << "\n";
+    else if(b + c > m)
+        cout << m << "\n";
+    else
+        cout << a + b + c << "\n";
+
     return 0;   
 }
