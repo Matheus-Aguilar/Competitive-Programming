@@ -1,5 +1,3 @@
-# Maratona
+# Competitive Programming
 
-Este repositório contém alguns problemas que resolvi para treinar para a Maratona de Programação da SBC.
-
-(Ainda em Construção...)
+Problems solved to train to competitive programming competitions.
