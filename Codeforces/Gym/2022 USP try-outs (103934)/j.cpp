@@ -199,9 +199,9 @@ int main() {
 		int ans = seg[1];
 		
 		if(ans == INF)
-			cout << -1 << endl;
+			cout << -1 << "\n";
 		else
-			cout << ans << endl;
+			cout << ans << "\n";
  
 	}
 
